@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Will You Be my Girl friend?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FF6F61;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #FF3D2D;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .heart {
+            font-size: 5em;
+            color: red;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Marry Me?</h1>
+    <h2>Click the button to reveal your answer!</h2>
+
+    <button class="button" onclick="revealProposal()">Click Me!</button>
+
+    <div id="proposal" class="hidden">
+        <h2>Forever is just the beginning...</h2>
+        <div class="heart">❤️</div>
+        <p style="font-size: 1.5em;">I love you with all my heart. Will you marry me?</p>
+    </div>
+
+    <script>
+        function revealProposal() {
+            // Change background color to something romantic
+            document.body.style.backgroundColor = "#FFEBEB";
+            document.body.style.color = "#FF6F61";
+
+            // Hide the button and show the proposal message
+            document.querySelector(".button").style.display = "none";
+            document.getElementById("proposal").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
